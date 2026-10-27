@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fractal Drawer - Ranvir</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="main-box">
+    <h2>Interactive Fractal Generator</h2>
+    <p>Move the sliders below to change the recursion depth and branch angle.</p>
+
+    <div class="controls">
+      <label>
+        Fractal Type:
+        <select id="typeSelect">
+          <option value="tree">Recursive Tree</option>
+          <option value="triangle">Sierpinski Triangle</option>
+        </select>
+      </label>
+
+      <label>
+        Depth (<span id="depthVal">7</span>):
+        <input type="range" id="depthSlider" min="1" max="10" value="7">
+      </label>
+
+      <label id="angleBox">
+        Angle (<span id="angleVal">25</span> deg):
+        <input type="range" id="angleSlider" min="5" max="60" value="25">
+      </label>
+
+      <label>
+        Color:
+        <input type="color" id="colorPicker" value="#38bdf8">
+      </label>
+    </div>
+
+    <canvas id="fractalCanvas" width="360" height="360"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
